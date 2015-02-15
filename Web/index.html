@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JSTZNet Tester</title>
+</head>
+<body>
+    <h1>JSTZNet Driver Page</h1>
+    <script type="text/javascript" src="./Scripts/JSTZNetData.js"></script>
+<script type="text/javascript" src="./Scripts/JSTZNet.js"></script>
+<div id="content"></div>
+<script>
+    var para = document.createElement("h2");
+    var tzname = window.jstznet.determine();
+    var node = document.createTextNode(tzname);
+    para.appendChild(node);
+
+    var element = document.getElementById("content");
+    element.appendChild(para);
+</script>
+</body>
+</html>
